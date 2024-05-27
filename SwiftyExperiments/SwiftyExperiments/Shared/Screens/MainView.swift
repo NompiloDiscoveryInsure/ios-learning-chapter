@@ -34,6 +34,9 @@ struct MainView: View {
         case .eddison:
             let detailView = TeammateDetailView { EddisonLandingView() }
             NavigationLink(destination: detailView, label: { rowView })
+        case .sunflower:
+            let detailView = TeammateDetailView { SunflowerView() }
+            NavigationLink(destination: detailView, label: { rowView })
         default:
             let defaultDetailView = TeammateDetailView { Text(teammate.name) }
             NavigationLink(destination: defaultDetailView, label: { rowView })
